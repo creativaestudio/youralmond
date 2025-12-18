@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto YourAlmond</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#c8d301", "primary-dark": "#b5be01", "bg-main": "#FFFFFF", "bg-secondary": "#F5F5F5", "bg-footer": "#121212", "text-main": "#333333", "text-light": "#FFFFFF", "text-muted": "#666666", "border-input": "#E0E0E0", "background-light": "#f8f7f6", "background-dark": "#221b10"}, fontFamily: {sans: ["Montserrat", "sans-serif"], display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .input-underline {
+            background-color: transparent;
+            border-width: 0 0 1px 0;
+            border-color: #E0E0E0;
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .input-underline:focus {
+            border-color: #FF6B00;
+            box-shadow: none;
+            outline: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    .header-bg {
+        background-image: url('images/fh.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    </style>
+</head>
+<body class="bg-bg-main font-sans text-text-main antialiased overflow-x-hidden">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300 header-bg">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-6 md:px-10 lg:px-40 flex flex-1 justify-center py-4">
+<div class="layout-content-container flex w-full max-w-[1440px] items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3 cursor-pointer">
+<a href="index.html">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-12 w-auto" style="height: 7rem;">
+</a>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden lg:flex items-center justify-center gap-10">
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="empresa.html">Sobre Nosotros</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="producto.html">Productos</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="proceso.html">Proceso</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="trazabilidad.html">Trazabilidad</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="certificaciones.html">Certificaciones</a>
+<a class="text-primary font-semibold text-sm transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="contacto.html">Contacto</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-11 px-6 cursor-pointer items-center justify-center rounded-lg bg-primary hover:bg-primary/90 text-white dark:text-background-dark text-sm font-bold shadow-sm transition-transform hover:scale-105">
+<span>Solicitar Presupuesto</span>
+</button>
+<button class="lg:hidden p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col lg:flex-row max-w-[1920px] mx-auto w-full bg-white">
+<div class="w-full lg:w-5/12 xl:w-1/2 p-6 lg:p-12 xl:p-20 flex flex-col justify-between order-2 lg:order-1 relative">
+<div class="max-w-xl">
+<div class="mb-10 lg:mb-16">
+<span class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider text-primary uppercase bg-primary/10 rounded-full">
+                            Excelencia B2B
+                        </span>
+<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-text-main leading-tight tracking-tight mb-6">
+                            ¿Listo para elevar la calidad de su producto?
+                        </h1>
+<p class="text-lg text-text-muted font-normal leading-relaxed max-w-md">
+                            Colaboramos con industrias exigentes que valoran el origen, la tecnología y la trazabilidad. Solicita tu muestra o presupuesto personalizado hoy mismo.
+                        </p>
+</div>
+<div class="flex flex-col gap-8 mb-12">
+<div class="flex items-start gap-4 group">
+<div class="p-3 bg-bg-secondary rounded-full text-text-main group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm text-text-muted font-medium mb-1">Contacto Comercial</p>
+<a class="text-lg font-bold text-text-main hover:text-primary transition-colors" href="mailto:sales@youralmond.com">sales@youralmond.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<div class="p-3 bg-bg-secondary rounded-full text-text-main group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-sm text-text-muted font-medium mb-1">Oficinas Centrales</p>
+<p class="text-lg font-bold text-text-main">Murcia, España</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto hidden lg:block relative h-72 w-full rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
+<img alt="Almonds detail texture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/almonds-detail-texture.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="text-sm font-bold tracking-wide mb-1">YOURALMOND® QUALITY</p>
+<p class="text-xs opacity-80 font-light">Tecnología de selección óptica avanzada</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-7/12 xl:w-1/2 p-6 lg:p-12 xl:p-20 order-1 lg:order-2 flex flex-col justify-center bg-bg-secondary lg:bg-white">
+<div class="max-w-2xl w-full mx-auto bg-white lg:bg-bg-secondary p-8 md:p-12 rounded-3xl shadow-sm lg:shadow-none border border-border-input lg:border-none">
+<form action="#" class="flex flex-col gap-8" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group">
+<label class="block text-sm font-semibold text-text-main mb-1" for="name">Nombre completo <span class="text-primary">*</span></label>
+<input class="input-underline w-full py-3 text-base text-text-main placeholder:text-gray-400 bg-transparent focus:ring-0" id="name" name="name" placeholder="Ej. Juan Pérez" required="" type="text"/>
+</div>
+<div class="group">
+<label class="block text-sm font-semibold text-text-main mb-1" for="email">Correo corporativo <span class="text-primary">*</span></label>
+<input class="input-underline w-full py-3 text-base text-text-main placeholder:text-gray-400 bg-transparent focus:ring-0" id="email" name="email" placeholder="nombre@empresa.com" required="" type="email"/>
+</div>
+</div>
+<div class="group">
+<label class="block text-sm font-semibold text-text-main mb-1" for="type">Tipo de consulta <span class="text-primary">*</span></label>
+<div class="relative">
+<select class="input-underline w-full py-3 text-base text-text-main bg-transparent focus:ring-0 cursor-pointer appearance-none pr-10" id="type" name="type" required="">
+<option disabled="" value="">Selecciona una opción</option>
+<option value="muestra">Solicitar muestra gratuita</option>
+<option selected="" value="presupuesto">Presupuesto personalizado</option>
+<option value="distribucion">Distribución mayorista</option>
+<option value="otros">Otros</option>
+</select>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-text-muted">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" id="conditional-fields">
+<div class="group">
+<label class="block text-sm font-semibold text-text-main mb-1" for="volume">Volumen estimado mensual (kg)</label>
+<input class="input-underline w-full py-3 text-base text-text-main placeholder:text-gray-400 bg-transparent focus:ring-0" id="volume" name="volume" placeholder="Ej: 2.000 kg" type="text"/>
+</div>
+<div class="group">
+<label class="block text-sm font-semibold text-text-main mb-1" for="country">País de destino</label>
+<input class="input-underline w-full py-3 text-base text-text-main placeholder:text-gray-400 bg-transparent focus:ring-0" id="country" name="country" placeholder="Ej: Alemania" type="text"/>
+</div>
+</div>
+<div class="group">
+<label class="block text-sm font-semibold text-text-main mb-1" for="message">Mensaje</label>
+<textarea class="input-underline w-full py-3 text-base text-text-main placeholder:text-gray-400 bg-transparent focus:ring-0 resize-none" id="message" name="message" placeholder="Describa sus necesidades específicas..." rows="3"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-4 pt-4">
+<button class="group relative flex items-center justify-center w-full md:w-auto bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98]" type="submit">
+<span class="mr-2">Enviar solicitud</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">send</span>
+</button>
+<button class="w-full md:w-auto flex items-center justify-center py-4 px-6 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all duration-300" type="button">
+                                Solicitar Muestra Gratuita
+                            </button>
+</div>
+<div class="flex items-center gap-2 text-text-muted mt-2">
+<span class="material-symbols-outlined text-sm text-green-600">verified_user</span>
+<p class="text-xs font-medium">Sus datos están protegidos. Respuesta garantizada en 24h.</p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<footer class="bg-bg-footer border-t border-gray-900 text-white">
+<div class="max-w-[1920px] mx-auto px-6 lg:px-20 py-16">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-10 w-auto" style="height: 5rem;">
+</div>
+<p class="text-sm text-gray-400 max-w-sm leading-relaxed">
+                            Llevando la excelencia de la almendra española al mercado global con tecnología de vanguardia y transparencia total.
+                        </p>
+</div>
+<div class="flex flex-col md:items-end gap-4">
+<div class="flex flex-wrap gap-8 text-sm font-medium text-gray-300">
+<a class="hover:text-primary transition-colors" href="#">Aviso Legal</a>
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Política de Cookies</a>
+</div>
+<div class="flex gap-4 mt-2">
+<a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<p>© 2025 YourAlmond S.L. Todos los derechos reservados. Design by <a href="https://ruzafa.marketing/" target="_blank" class="hover:text-primary transition-colors">ruzafa.marketing</a></p>
+<p class="mt-2 md:mt-0">Diseñado para la excelencia.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
