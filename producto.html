@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YourAlmond - Tipos de Almendra y Especificaciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                    "primary": "#c8d301",
+                    "background-light": "#f8f7f6",
+                    "background-dark": "#221b10",
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+</head>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for tables */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+        .light .bg-surface-light { background-color: #ffffff; }
+        .dark .bg-surface-dark { background-color: #2D2418; }
+    .header-bg {
+        background-image: url('images/fh.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300 header-bg">
+<div class="px-6 md:px-10 lg:px-40 flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-4">
+<div class="flex w-full max-w-[1440px] items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3 cursor-pointer">
+<a href="index.html">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-12 w-auto" style="height: 7rem;">
+</a>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden lg:flex items-center justify-center gap-10">
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="empresa.html">Sobre Nosotros</a>
+<a class="text-primary font-semibold text-sm transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="producto.html">Productos</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="proceso.html">Proceso</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="trazabilidad.html">Trazabilidad</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="certificaciones.html">Certificaciones</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-11 px-6 cursor-pointer items-center justify-center rounded-lg bg-primary hover:bg-primary/90 text-white dark:text-background-dark text-sm font-bold shadow-sm transition-transform hover:scale-105">
+<span>Acceso Clientes</span>
+</button>
+<button class="lg:hidden p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<div class="relative w-full bg-background-dark">
+<div class="absolute inset-0 z-0">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat opacity-60 mix-blend-overlay" data-alt="Dark moody close up of almonds on wood table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFT-AsmqXWoNg0xeJDepKHr09iWZOM5nIjOeMzSk0qDqGBRwNeb4JxFlJyntU-xjAG2KpaXUNvYWXnPf--FodeyyraFm3lJ1suOGEdUT5TvfdQkI4gSWa9qMD3_K4HXn5U-hUIbimRBBBr6yrhnh2HHwGE1u5l-A-Vjy6v7CBV6DJwmpnkrP9hvMl5q3-9VqRC60s-gpHqKYkwtGM50cGLixaePOuYJ_ZL25711H2aHN8xMPk6fpdBA8QqkXNoMIrm6jO6-d9v_ck");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-6 md:px-10 lg:px-40 py-24 lg:py-40 flex justify-center">
+<div class="max-w-[1440px] w-full flex flex-col items-center text-center gap-8">
+<div class="flex items-center gap-2 mb-4 text-white/80 text-sm">
+<a class="hover:text-primary" href="#">Inicio</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-white font-medium">Catálogo de Variedades</span>
+</div>
+<h1 class="text-white text-4xl md:text-5xl font-black tracking-tight mb-4">
+                        Tipos de Almendra y Especificaciones
+                    </h1>
+<p class="text-white/90 text-lg max-w-2xl font-light">
+                        Catálogo técnico de variedades premium con trazabilidad garantizada y origen 100% español. Descubre las características organolépticas perfectas para tu industria.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Filters & Controls Bar -->
+<div class="sticky top-[65px] z-40 w-full bg-background-light dark:bg-background-dark border-b border-[#e7dfcf] dark:border-[#3e3426] shadow-sm">
+<div class="max-w-[1400px] mx-auto px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-wrap gap-3 items-center">
+<div class="flex items-center gap-2 mr-2 text-sm font-semibold opacity-70">
+<span class="material-symbols-outlined">filter_list</span>
+                            Filtros:
+                        </div>
+<button class="group flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary text-sm font-medium transition-colors border border-primary/20">
+                            Variedad: Todas
+                            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="group flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f3efe7] dark:bg-[#332b20] hover:bg-[#e7dfcf] dark:hover:bg-[#3e3426] text-sm font-medium transition-colors border border-transparent">
+                            Formato: Entera
+                            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="group flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f3efe7] dark:bg-[#332b20] hover:bg-[#e7dfcf] dark:hover:bg-[#3e3426] text-sm font-medium transition-colors border border-transparent">
+                            Calibre
+                            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="text-sm text-gray-500 hover:text-primary underline decoration-dotted ml-2">Limpiar filtros</button>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm text-gray-500 dark:text-gray-400 hidden md:block">Vista:</span>
+<div class="flex bg-[#f3efe7] dark:bg-[#332b20] p-1 rounded-lg">
+<button class="p-1.5 rounded bg-white dark:bg-[#4a3f30] shadow-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</button>
+<button class="p-1.5 rounded text-gray-400 hover:text-[#1b160d] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">view_list</span>
+</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-colors text-sm font-bold ml-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                            Catálogo PDF
+                        </button>
+</div>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="max-w-[1400px] mx-auto px-4 md:px-8 py-10">
+<!-- Section Header -->
+<div class="flex items-baseline justify-between mb-8 border-b border-[#e7dfcf] dark:border-[#3e3426] pb-4">
+<h2 class="text-2xl font-bold tracking-tight">Variedades Destacadas</h2>
+<span class="text-sm text-gray-500">Mostrando 4 de 12 variedades</span>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+<!-- Card 1: Marcona -->
+<article class="group bg-white dark:bg-[#2D2418] rounded-xl overflow-hidden border border-[#e7dfcf] dark:border-[#3e3426] hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute top-3 left-3 z-10 bg-primary text-[#1b160d] text-xs font-bold px-2 py-1 rounded shadow-sm">PREMIUM</div>
+<img alt="Marcona almonds scattered on surface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of raw marcona almonds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO_TfLAT6iNbx1Kl3te3Sk6Ztmcc-OpimGaluPr780WdW9HlcCOen_rPamfHzTuukXOOQYTTfpKf6bF0lWdIdCUI7wmVpkNziEyUOGXCUD3zw7ZGEW1Daew-gP1HqgGF9imeahCh9ctVuLtAehcXv1Uk0N7YWkufqjOmmCFLtB_NUm6AValWAiPacrf2mC4YN2jj-5A-L-lZsUKvxkFlOtQGrKFRGho_oBkdU0K8sRZh4RPWhtaIDREISLycuixE242qTPNhrZTfs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+<button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-100">Ver Ficha Técnica</button>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-[#1b160d] dark:text-[#f3efe7]">Marcona</h3>
+<span class="material-symbols-outlined text-primary" title="Certified Origin">verified</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">La "Reina de las Almendras". Dulce, aceitosa y redondeada. Ideal para repostería gourmet.</p>
+<div class="space-y-2 mb-6 mt-auto">
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Calibre</span>
+<span class="font-medium">12/14 mm - 16 mm</span>
+</div>
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Aceite</span>
+<span class="font-medium">~56% (Alto)</span>
+</div>
+<div class="flex justify-between text-sm pb-1">
+<span class="text-gray-500 dark:text-gray-400">Dureza</span>
+<span class="font-medium">Blanda</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-[#e7dfcf] dark:border-[#4a3f30] hover:border-primary hover:text-primary transition-colors text-sm font-semibold flex items-center justify-center gap-2 group/btn">
+                                Solicitar Muestra
+                                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Largueta -->
+<article class="group bg-white dark:bg-[#2D2418] rounded-xl overflow-hidden border border-[#e7dfcf] dark:border-[#3e3426] hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Pile of largueta almonds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heap of long largueta almonds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlqwO6rzMb3Gl9OPKj5IGzAJL_55bEbn1egBRWvwRvm1hGzeD67SEdnS987pXFhx0Ug7Eyny9Yu6gWUksO_gWdbD7QKoqKF-BAO1mubOCzWgGDkNCbrybxx62C956wyMtJbfQ0zKQCZEuVZ47r5yYJ1jQj73wf-iZWkbmuuU4VZcbHaAr6_kWHoCGi8nGz-c8b59Dngip2wak_lik-GmOSP5X9DHgjQMHoOJx6JfNDOTuqHU5Qw_dH91SBhwizUGueU_XH4CIxzOA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+<button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-100">Ver Ficha Técnica</button>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-[#1b160d] dark:text-[#f3efe7]">Largueta</h3>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Alargada y estrecha. Piel tostada excelente que se desprende fácilmente. Perfecta para snacks y chocolates.</p>
+<div class="space-y-2 mb-6 mt-auto">
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Calibre</span>
+<span class="font-medium">10/11 mm - 13/14 mm</span>
+</div>
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Aceite</span>
+<span class="font-medium">~54% (Medio)</span>
+</div>
+<div class="flex justify-between text-sm pb-1">
+<span class="text-gray-500 dark:text-gray-400">Dureza</span>
+<span class="font-medium">Media-Alta</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-[#e7dfcf] dark:border-[#4a3f30] hover:border-primary hover:text-primary transition-colors text-sm font-semibold flex items-center justify-center gap-2 group/btn">
+                                Solicitar Muestra
+                                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Guara -->
+<article class="group bg-white dark:bg-[#2D2418] rounded-xl overflow-hidden border border-[#e7dfcf] dark:border-[#3e3426] hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Guara almonds in bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Top view of almonds in wooden bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfS8muSBcPIu_oIOg_9JT649d8sqN2OSDquPvo0H_a0Tp6-86wI4FWescpLXA34_nczTVluP8nU6BMPsxdcgf0m8cy4qOif3F5-bJj351niT14FWdZ72conBVzZyXZetDzCbMdUoRFja3inaRCfRQwkjh21JMKlMlcL7xalAFWz5qMLr7qjPaQU_Uvk_lVYyboENMJiwmfln7y-2wamGpHCpUbWgV5Yu-WsTfwxfZmjaWHF4yPcf9pjQihCjgrEwoT7xqtdsDQaPg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+<button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-100">Ver Ficha Técnica</button>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-[#1b160d] dark:text-[#f3efe7]">Guara</h3>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Sabor dulce que recuerda a la Marcona. Versátil para industria alimentaria por su regularidad.</p>
+<div class="space-y-2 mb-6 mt-auto">
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Calibre</span>
+<span class="font-medium">11/13 mm - 14+ mm</span>
+</div>
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Aceite</span>
+<span class="font-medium">~58% (Alto)</span>
+</div>
+<div class="flex justify-between text-sm pb-1">
+<span class="text-gray-500 dark:text-gray-400">Dureza</span>
+<span class="font-medium">Media</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-[#e7dfcf] dark:border-[#4a3f30] hover:border-primary hover:text-primary transition-colors text-sm font-semibold flex items-center justify-center gap-2 group/btn">
+                                Solicitar Muestra
+                                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Ecological/Organic -->
+<article class="group bg-white dark:bg-[#2D2418] rounded-xl overflow-hidden border border-[#e7dfcf] dark:border-[#3e3426] hover:shadow-lg transition-all duration-300 flex flex-col h-full relative">
+<div class="absolute -right-8 top-5 bg-green-600 text-white text-[10px] font-bold py-1 w-32 text-center rotate-45 z-20 shadow-sm">ECO / BIO</div>
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Organic almond field harvest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale-[20%]" data-alt="Almonds growing on tree branch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC26VQmnK3WSLUrHo4J_T5DJeVL55jtO6pa_w0wUkNrfxi2Z3N4dWf74vzC0XnD1uumw0dBwqeEXRchtXC266lYfb5lSXBZWScZU6iZVzQm6NhiTn-EBicLDSoal_QndLf2CNOb2bx8MtAgnXxsEU3GFEE9ZKGbVvd2YB9QF7QNNxLU8hEZuX6q1ORoIXKHn_69cVmMeo54M_cia0xQaw_baIRGZoVippPBFwyVY-WmQ_dLLIsAVrYckan53yzh2SpRucYsNLxcnJs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+<button class="bg-white text-black px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-100">Ver Ficha Técnica</button>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-[#1b160d] dark:text-[#f3efe7]">Comuna Ecológica</h3>
+<span class="material-symbols-outlined text-green-600" title="Organic Certified">eco</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Mix de variedades de floración tardía. Cultivo certificado ecológico sin pesticidas.</p>
+<div class="space-y-2 mb-6 mt-auto">
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Calibre</span>
+<span class="font-medium">Variado (Standard)</span>
+</div>
+<div class="flex justify-between text-sm border-b border-dashed border-gray-200 dark:border-gray-700 pb-1">
+<span class="text-gray-500 dark:text-gray-400">Aceite</span>
+<span class="font-medium">~55%</span>
+</div>
+<div class="flex justify-between text-sm pb-1">
+<span class="text-gray-500 dark:text-gray-400">Certificación</span>
+<span class="font-medium text-green-600">CAAE / EU Organic</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-[#e7dfcf] dark:border-[#4a3f30] hover:border-primary hover:text-primary transition-colors text-sm font-semibold flex items-center justify-center gap-2 group/btn">
+                                Solicitar Muestra
+                                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Technical Specification Table Section -->
+<div class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+<div>
+<h2 class="text-2xl font-bold tracking-tight mb-2">Tabla Comparativa Técnica</h2>
+<p class="text-gray-500 max-w-2xl">
+                                Compare los parámetros físico-químicos de nuestras variedades para seleccionar el producto óptimo para su proceso industrial.
+                            </p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                            Ver metodología de análisis
+                            <span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</div>
+<div class="overflow-hidden rounded-xl border border-[#e7dfcf] dark:border-[#3e3426] shadow-sm bg-white dark:bg-[#2D2418]">
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-sm text-left">
+<thead class="text-xs text-gray-500 uppercase bg-[#fcfaf8] dark:bg-[#332b20] border-b border-[#e7dfcf] dark:border-[#3e3426]">
+<tr>
+<th class="px-6 py-4 font-bold text-[#1b160d] dark:text-[#f3efe7]" scope="col">Variedad</th>
+<th class="px-6 py-4" scope="col">Humedad Max</th>
+<th class="px-6 py-4" scope="col">Materia Grasa</th>
+<th class="px-6 py-4" scope="col">Proteína</th>
+<th class="px-6 py-4" scope="col">Fibra</th>
+<th class="px-6 py-4" scope="col">Azúcares</th>
+<th class="px-6 py-4" scope="col">Usos Recomendados</th>
+<th class="px-6 py-4 text-right" scope="col">Ficha Técnica</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#e7dfcf] dark:divide-[#3e3426]">
+<tr class="hover:bg-gray-50 dark:hover:bg-[#3a3024] transition-colors">
+<td class="px-6 py-4 font-bold text-primary">Marcona</td>
+<td class="px-6 py-4">5.0%</td>
+<td class="px-6 py-4">56-59%</td>
+<td class="px-6 py-4">20%</td>
+<td class="px-6 py-4">11%</td>
+<td class="px-6 py-4">4.2%</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 mr-1">Turrón</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">Gourmet</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#3a3024] transition-colors">
+<td class="px-6 py-4 font-bold text-primary">Largueta</td>
+<td class="px-6 py-4">5.5%</td>
+<td class="px-6 py-4">52-54%</td>
+<td class="px-6 py-4">22%</td>
+<td class="px-6 py-4">12%</td>
+<td class="px-6 py-4">4.0%</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 mr-1">Snack</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">Chocolate</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#3a3024] transition-colors">
+<td class="px-6 py-4 font-bold text-primary">Guara</td>
+<td class="px-6 py-4">6.0%</td>
+<td class="px-6 py-4">57-59%</td>
+<td class="px-6 py-4">19%</td>
+<td class="px-6 py-4">10%</td>
+<td class="px-6 py-4">4.8%</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 mr-1">Harinas</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">Heladería</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-[#3a3024] transition-colors">
+<td class="px-6 py-4 font-bold text-primary">Comuna</td>
+<td class="px-6 py-4">6.0%</td>
+<td class="px-6 py-4">53-55%</td>
+<td class="px-6 py-4">21%</td>
+<td class="px-6 py-4">11%</td>
+<td class="px-6 py-4">4.5%</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 mr-1">Mazapán</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">Mixes</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-primary transition-colors"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 bg-[#fcfaf8] dark:bg-[#332b20] border-t border-[#e7dfcf] dark:border-[#3e3426] flex justify-between items-center text-xs text-gray-500">
+<p>* Valores medios sujetos a variaciones naturales de cada cosecha.</p>
+<a class="font-bold text-primary hover:underline" href="#">Solicitar analítica completa de lote &gt;</a>
+</div>
+</div>
+</div>
+<!-- Quality & Certifications -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+<div class="bg-primary/5 rounded-2xl p-8 flex flex-col justify-center">
+<div class="size-12 rounded-full bg-primary flex items-center justify-center text-white mb-4">
+<span class="material-symbols-outlined text-[28px]">science</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Laboratorio y Calidad</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Nuestra tecnología de selección óptica y rayos X garantiza la ausencia de cuerpos extraños. Cada lote es analizado para garantizar que cumple con las especificaciones de calibre, humedad y ausencia de aflatoxinas.
+                        </p>
+<div class="flex flex-wrap gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder logos for certs -->
+<div class="h-12 w-20 bg-white dark:bg-white/10 rounded border border-black/10 flex items-center justify-center font-bold text-xs text-center" data-alt="IFS Food Certification Logo">IFS Food</div>
+<div class="h-12 w-20 bg-white dark:bg-white/10 rounded border border-black/10 flex items-center justify-center font-bold text-xs text-center" data-alt="BRC Global Standard Logo">BRCGS</div>
+<div class="h-12 w-20 bg-white dark:bg-white/10 rounded border border-black/10 flex items-center justify-center font-bold text-xs text-center" data-alt="Kosher Certification Logo">Kosher</div>
+<div class="h-12 w-20 bg-white dark:bg-white/10 rounded border border-black/10 flex items-center justify-center font-bold text-xs text-center" data-alt="Halal Certification Logo">Halal</div>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden min-h-[300px]" data-alt="High tech laboratory with microscope" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcUJfXfqvR2Eq9oyRBanTcFK90-ROvg_QzPF404tBAS3JMs9flYssafhHPofLqMOX7IsSga-Zygot1HWdGW_h-UchmaSWGF-EyTpJ2AVsBHBm41yTdRAbEvA4x9Lvw9EhIKkwbJ4pa25v8Q-k1ZucaB6TOhHFpxdNnax5pRgpFV_53RlrsMwAM1yRYJQQw5X-fNLrujzkfvDvDlGnlQoO6-g5V76tQRk_dhU5bvITH4DF1aEoQ_F0_FIGj4vFTGMM_f5g13MhQBEY');">
+<div class="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end items-start text-white">
+<h3 class="text-2xl font-bold mb-2">¿Necesitas un calibre específico?</h3>
+<p class="text-white/80 mb-6 max-w-md">
+                                Ofrecemos calibrados a medida y formatos industriales (harina, granillo, láminas) adaptados a tu línea de producción.
+                            </p>
+<button class="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-colors">
+                                Contactar con Ventas
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1b160d] text-white pt-16 pb-8">
+<div class="max-w-[1400px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-10 w-auto" style="height: 5rem;">
+</div>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Líderes en el procesamiento y distribución de almendra española premium. Trazabilidad del campo a la mesa.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">Instagram</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary text-sm uppercase tracking-wider">Productos</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-white" href="#">Almendra Marcona</a></li>
+<li><a class="hover:text-white" href="#">Almendra Largueta</a></li>
+<li><a class="hover:text-white" href="#">Almendra Ecológica</a></li>
+<li><a class="hover:text-white" href="#">Industrial (Harinas/Cubos)</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary text-sm uppercase tracking-wider">Empresa</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-white" href="empresa.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-white" href="sostenibilidad.html">Sostenibilidad</a></li>
+<li><a class="hover:text-white" href="trazabilidad.html">Trazabilidad Blockchain</a></li>
+<li><a class="hover:text-white" href="contacto.html">Trabaja con nosotros</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary text-sm uppercase tracking-wider">Contacto B2B</h4>
+<p class="text-sm text-gray-400 mb-2">Oficinas Centrales: Madrid, España</p>
+<p class="text-sm text-gray-400 mb-2">Tel: +34 912 345 678</p>
+<p class="text-sm text-gray-400 mb-4">Email: b2b@youralmond.com</p>
+<button class="bg-primary/20 hover:bg-primary text-primary hover:text-white border border-primary transition-colors px-4 py-2 rounded text-sm font-bold w-full">
+                            Área Distribuidores
+                        </button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+<p>© 2025 YourAlmond S.L. Todos los derechos reservados. Design by <a href="https://ruzafa.marketing/" target="_blank" class="hover:text-primary transition-colors">ruzafa.marketing</a></p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Política de Privacidad</a>
+<a class="hover:text-white" href="#">Términos de Uso</a>
+<a class="hover:text-white" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

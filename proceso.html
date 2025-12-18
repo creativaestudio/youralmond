@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>El Proceso YourAlmond - Excelencia Tecnológica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c8d301",
+                        "primary-dark": "#b5be01",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#1b160d",
+                        "text-dark": "#1b160d",
+                        "text-light": "#fcfaf8",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom timeline connector */
+        .timeline-connector {
+            position: absolute;
+            top: 24px;
+            bottom: -24px;
+            left: 20px;
+            width: 2px;
+            background: #e7dfcf;
+            z-index: 0;
+        }
+        .last-item .timeline-connector {
+            display: none;
+        }
+    .header-bg {
+        background-image: url('images/fh.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .logofooter {
+        background-color: white;
+    }
+    
+    /* Video Modal Styles */
+    .video-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        animation: fadeIn 0.3s ease;
+    }
+    
+    .video-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .video-modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 900px;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        animation: slideIn 0.3s ease;
+    }
+    
+    .video-modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+    
+    .video-modal-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+    }
+    
+    video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark dark:text-text-light transition-colors duration-200">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#f3efe7] dark:border-[#332c22] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm header-bg">
+<div class="px-4 md:px-10 py-3 flex items-center justify-between max-w-[1440px] mx-auto">
+<div class="flex items-center gap-4">
+<a href="index.html">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-12 w-auto" style="height: 7rem;">
+</a>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-8">
+<div class="flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-dark dark:text-gray-300" href="empresa.html">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-dark dark:text-gray-300" href="producto.html">Productos</a>
+<a class="text-primary font-semibold text-sm transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="proceso.html">Proceso</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-dark dark:text-gray-300" href="trazabilidad.html">Trazabilidad</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-dark dark:text-gray-300" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-dark dark:text-gray-300" href="certificaciones.html">Certificaciones</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-text-dark dark:text-gray-300" href="contacto.html">Contacto</a>
+</div>
+<button class="bg-primary hover:bg-primary-dark text-white dark:text-[#1b160d] text-sm font-bold h-10 px-6 rounded-lg transition-colors">
+                    Acceso Clientes
+                </button>
+</nav>
+<button class="md:hidden text-text-dark dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col w-full overflow-hidden">
+<!-- Hero Section -->
+<section class="relative flex min-h-[600px] w-full items-center justify-center bg-background-dark px-4 py-20 overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/70 to-transparent z-10"></div>
+<img alt="Process Background" class="h-full w-full object-cover opacity-60" data-alt="Abstract slow motion machinery sorting almonds" src="images/proceso.jpg"/>
+</div>
+<div class="relative z-20 max-w-[960px] w-full flex flex-col items-start gap-6 animate-fade-in-up">
+<div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 backdrop-blur-md">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Ingeniería &amp; Origen</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-[-0.033em]">
+                    El Proceso <span class="text-primary">YourAlmond</span>
+</h1>
+<p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+                    Donde la precisión tecnológica se encuentra con el origen natural. Descubra nuestro centro de excelencia y cómo redefinimos los estándares de calidad en cada almendra.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button id="videoModalBtn" class="flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-sm font-bold text-background-dark transition hover:bg-primary-dark">
+                        Ver Video del Proceso
+                    </button>
+<button class="flex h-12 items-center justify-center rounded-lg border border-white/20 bg-white/5 px-8 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/10">
+                        Descargar Ficha Técnica
+                    </button>
+</div>
+</div>
+</section>
+<!-- Intro Text -->
+<section class="py-24 px-4 bg-background-light dark:bg-background-dark">
+<div class="max-w-[800px] mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-text-dark dark:text-white">
+                    Tecnología al servicio del sabor
+                </h2>
+<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Transformamos la almendra española a través de un proceso industrial de vanguardia. En nuestra planta, la tradición agrícola se fusiona con la innovación óptica y láser, garantizando pureza, consistencia y una trazabilidad total desde el campo hasta su negocio.
+                </p>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[960px] mx-auto mt-16 border-t border-gray-200 dark:border-gray-800 pt-12">
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-black text-primary mb-2">100%</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Origen España</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-black text-primary mb-2">0.01%</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Impurezas Máx</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-black text-primary mb-2">24h</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Tiempo Proceso</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="text-4xl font-black text-primary mb-2">ISO</span>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Certificación</span>
+</div>
+</div>
+</section>
+<!-- Process Timeline Section -->
+<section class="py-20 px-4 bg-white dark:bg-[#2a2216]">
+<div class="max-w-[1100px] mx-auto">
+<div class="mb-16 text-center">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">El Viaje de la Excelencia</span>
+<h3 class="text-3xl font-bold mt-2 text-text-dark dark:text-white">Cadena de Valor Integral</h3>
+</div>
+<div class="relative">
+<!-- Step 1 -->
+<div class="grid md:grid-cols-[1fr_80px_1fr] gap-8 relative pb-20 group">
+<!-- Content Left (Desktop) -->
+<div class="md:text-right flex flex-col md:items-end justify-center order-2 md:order-1">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-soft border border-gray-100 dark:border-gray-700 md:max-w-md w-full transition-transform hover:-translate-y-1">
+<h4 class="text-xl font-bold text-text-dark dark:text-white mb-2">1. Cosecha Selectiva</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                    Selección rigurosa en los mejores campos de España. Solo recolectamos almendras en su punto óptimo de maduración y humedad.
+                                </p>
+<div class="flex md:justify-end gap-2 text-xs font-medium text-primary">
+<span class="bg-primary/10 px-2 py-1 rounded">Agricultura Sostenible</span>
+</div>
+</div>
+</div>
+<!-- Timeline Icon -->
+<div class="flex flex-col items-center relative order-1 md:order-2">
+<div class="w-[2px] h-full bg-gray-200 dark:bg-gray-700 absolute top-0 z-0"></div>
+<div class="size-14 rounded-full bg-primary flex items-center justify-center z-10 shadow-lg border-4 border-white dark:border-[#2a2216]">
+<span class="material-symbols-outlined text-white">agriculture</span>
+</div>
+</div>
+<!-- Image Right (Desktop) -->
+<div class="flex items-center order-3">
+<div class="h-48 w-full md:w-64 bg-gray-100 rounded-lg overflow-hidden relative">
+<img alt="Harvest" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Stylized vector illustration of almond trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWDe5m0XLlJj8x47P0JIhmMEVunXm71kWACC_Xf_0FbEfFhaUAyowcgI7RNk6Xp7_3tnaNuZquQ-wOIAP8o5SE-n0aNaav5JsJyNNMlwls2ROCnDOUDbp6YS8vwz5Bq7FNILHlJBrJbSd6GvtiiDudYoHF4i8MhP3_-S_NCn9Oi1Bf2TQD2eUQtydabovqwQkMr08m5NcfyUuBN2j9k9c3AA990jF0qFsjyiE6l6vV-B9NDs4Of5GCiN55KYOT0keRX8QOWdwqNFs"/>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="grid md:grid-cols-[1fr_80px_1fr] gap-8 relative pb-20 group">
+<!-- Image Left (Desktop) -->
+<div class="flex items-center justify-end order-3 md:order-1">
+<div class="h-48 w-full md:w-64 bg-gray-100 rounded-lg overflow-hidden relative">
+<img alt="Tech Hub" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Technical drawing of sorting machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJJ0SQg8k4kLF_xP4CoHUkrR2z_svZAPHUVOO_W0Gefns5zCSjkwMDXHuwhZeiab4a2ktHSDDf2aqi4QB4yRDjhGs1WZat5xJqpDMAQZMbAEfQigNO7BKyU8_dF78XCTFBojV1JddbQ08dnLdjJR7dX0hTIhNimodME5otImMyhL1PopRbl2vq0QjMl-MEoJSrhlYItYPgEXwAmDtf_8i5vs8v2EhpePHZspN6eIkALnUu29tEEmBig5hnr6VHDJ_HPpH9nni5kb0"/>
+</div>
+</div>
+<!-- Timeline Icon -->
+<div class="flex flex-col items-center relative order-1 md:order-2">
+<div class="w-[2px] h-full bg-gray-200 dark:bg-gray-700 absolute top-0 z-0"></div>
+<div class="size-14 rounded-full bg-primary flex items-center justify-center z-10 shadow-lg border-4 border-white dark:border-[#2a2216]">
+<span class="material-symbols-outlined text-white">precision_manufacturing</span>
+</div>
+</div>
+<!-- Content Right (Desktop) -->
+<div class="flex flex-col justify-center order-2 md:order-3">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-soft border border-gray-100 dark:border-gray-700 md:max-w-md w-full transition-transform hover:-translate-y-1">
+<div class="text-primary text-xs font-bold uppercase tracking-wider mb-1">El Tech Hub</div>
+<h4 class="text-xl font-bold text-text-dark dark:text-white mb-2">2. Procesamiento Inteligente</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                    Nuestra planta utiliza selectores ópticos de última generación para eliminar cuerpos extraños y clasificar por calibre con precisión milimétrica.
+                                </p>
+<div class="flex gap-2 text-xs font-medium text-primary">
+<span class="bg-primary/10 px-2 py-1 rounded">Tecnología Láser</span>
+<span class="bg-primary/10 px-2 py-1 rounded">Rayos X</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="grid md:grid-cols-[1fr_80px_1fr] gap-8 relative pb-20 group">
+<!-- Content Left (Desktop) -->
+<div class="md:text-right flex flex-col md:items-end justify-center order-2 md:order-1">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-soft border border-gray-100 dark:border-gray-700 md:max-w-md w-full transition-transform hover:-translate-y-1">
+<h4 class="text-xl font-bold text-text-dark dark:text-white mb-2">3. Laboratorio de Calidad</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                    Análisis exhaustivos de cada lote. Controlamos aflatoxinas, humedad y microbiología bajo los estándares más estrictos del mercado global.
+                                </p>
+<div class="flex md:justify-end gap-2 text-xs font-medium text-primary">
+<span class="bg-primary/10 px-2 py-1 rounded">Control BRC/IFS</span>
+</div>
+</div>
+</div>
+<!-- Timeline Icon -->
+<div class="flex flex-col items-center relative order-1 md:order-2">
+<div class="w-[2px] h-full bg-gray-200 dark:bg-gray-700 absolute top-0 z-0"></div>
+<div class="size-14 rounded-full bg-primary flex items-center justify-center z-10 shadow-lg border-4 border-white dark:border-[#2a2216]">
+<span class="material-symbols-outlined text-white">science</span>
+</div>
+</div>
+<!-- Image Right (Desktop) -->
+<div class="flex items-center order-3">
+<div class="h-48 w-full md:w-64 bg-gray-100 rounded-lg overflow-hidden relative">
+<img alt="Lab Quality" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Microscope lens viewing almond texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-kmhsikAcHdm6t-4tI_AeUEfWSlJ6eRlfWfj2fEG79e5bDhN2aZKvsNc0PEvoliM3fDrLIvRUhsgNkKRKShZKetdwIWxJckHf2C2h5_MwzkVsoVQ0eRjkCZ9PfWMytHEUgzLDXmSALQDXtKnraR4veQ8YCe5oT7Xvx9iQ540or5upMJLabWiZXXFimvBELCr254Qtno9BV9-3BCLV-FpwyB-BB1mnQxMg5D7yJnW-695fYN_I8ebkXh4bPrOVvyzB1cwILyUDO80"/>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="grid md:grid-cols-[1fr_80px_1fr] gap-8 relative group">
+<!-- Image Left (Desktop) -->
+<div class="flex items-center justify-end order-3 md:order-1">
+<div class="h-48 w-full md:w-64 bg-gray-100 rounded-lg overflow-hidden relative">
+<img alt="Logistics" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Digital map of logistics routes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeZTwDABACq-gTcuns08NpROEgEF-HzMkelNEid8dLCTki385_zgJRCSz-Cz1oVcH4Pbwgv_ytJVPVYJKhJIzVdtAIPp5zPoE6IuYzvOejH5tnzPKbW5yuHtx1FETqtP-dmAon4d3_Efn2FhvIDq7yXwQI-qzJYxwMUP9A8xmnVMqFQAywqcfXSv3KveN0p0dxHUec8eyKKPutnRskOgr1j3yxHnw3NYeFVrZg6cmvX74P9rFdrpc-bW_fuaQYJ1JzJgp-05XyHYQ"/>
+</div>
+</div>
+<!-- Timeline Icon -->
+<div class="flex flex-col items-center relative order-1 md:order-2">
+<!-- No vertical line for last item -->
+<div class="size-14 rounded-full bg-primary flex items-center justify-center z-10 shadow-lg border-4 border-white dark:border-[#2a2216]">
+<span class="material-symbols-outlined text-white">verified</span>
+</div>
+</div>
+<!-- Content Right (Desktop) -->
+<div class="flex flex-col justify-center order-2 md:order-3">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-soft border border-gray-100 dark:border-gray-700 md:max-w-md w-full transition-transform hover:-translate-y-1">
+<h4 class="text-xl font-bold text-text-dark dark:text-white mb-2">4. Trazabilidad Total</h4>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                    Información transparente para el cliente. Cada pedido incluye documentación completa del origen y parámetros de calidad.
+                                </p>
+<div class="flex gap-2 text-xs font-medium text-primary">
+<span class="bg-primary/10 px-2 py-1 rounded">QR Tracking</span>
+<span class="bg-primary/10 px-2 py-1 rounded">Blockchain Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Traceability Dashboard Mockup -->
+<section class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
+<div class="max-w-[1200px] mx-auto px-4 relative z-10">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-3xl font-bold text-text-dark dark:text-white mb-6">
+                            Lo que usted ve, <br/>
+<span class="text-primary">es lo que nosotros garantizamos.</span>
+</h3>
+<p class="text-gray-600 dark:text-gray-300 text-lg mb-8">
+                            Hemos digitalizado la confianza. A través de nuestro sistema de trazabilidad, nuestros clientes B2B pueden acceder en tiempo real a los datos específicos de su lote.
+                        </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-text-dark dark:text-gray-200">Fecha de recolección y procesado</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-text-dark dark:text-gray-200">Análisis de humedad y defectos</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-text-dark dark:text-gray-200">Geolocalización de la finca</span>
+</li>
+</ul>
+<button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                            Ver Demo de Trazabilidad <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Dashboard Card -->
+<div class="bg-white dark:bg-[#1f1a12] p-6 md:p-8 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-800 rotate-1 hover:rotate-0 transition-transform duration-500">
+<div class="flex justify-between items-center mb-6 border-b border-gray-100 dark:border-gray-700 pb-4">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-green-500"></div>
+<span class="font-bold text-sm text-text-dark dark:text-white">Lote #ES-2023-894</span>
+</div>
+<span class="text-xs text-gray-400">Verificado: 14 Oct 2023</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg">
+<div class="text-xs text-gray-500 mb-1">Calibre</div>
+<div class="text-xl font-bold text-text-dark dark:text-white">12/14 mm</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg">
+<div class="text-xs text-gray-500 mb-1">Humedad</div>
+<div class="text-xl font-bold text-text-dark dark:text-white">5.2%</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg">
+<div class="text-xs text-gray-500 mb-1">Variedad</div>
+<div class="text-xl font-bold text-text-dark dark:text-white">Guara</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg">
+<div class="text-xs text-gray-500 mb-1">Origen</div>
+<div class="text-xl font-bold text-text-dark dark:text-white">Albacete, ES</div>
+</div>
+</div>
+<div class="h-32 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative">
+<img alt="Map Location" class="w-full h-full object-cover opacity-80" data-alt="Map showing origin location in Spain" data-location="Albacete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEsHr9EALt2sBloC30aV9hmmqzivlDqY1p023NJY7HCZbKbHxnZ8rWgmzMe1hcAslTiuh9abBAbcCi2zZN4x0gmmr_5WIoufcppSU0Li4zvu5BRh76tnVnb08Pv2_PuoCK6EB-wbeUbZJQHRe7al-D33v4DBNTZbNGmKrjEeI8anFC7DUfkQsyjNBtIZ63giJ6clLIIwery_JRQcHRfzvxp9U94c04vnyabT1mXUgWttNZB2ZaVtLFqV3DIDPUWgE9tUmS5x3K9wU"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="bg-white dark:bg-black/70 text-xs px-2 py-1 rounded shadow text-text-dark dark:text-white font-mono">38.9943° N, 1.8585° W</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-16 bg-gray-50 dark:bg-[#16120b]">
+<div class="max-w-[960px] mx-auto px-4 text-center">
+<h3 class="text-lg font-semibold text-gray-500 mb-8 uppercase tracking-widest">Nuestros Estándares de Calidad</h3>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+<!-- Replace with actual SVG logos in production -->
+<div class="group flex flex-col items-center gap-2 cursor-pointer transition-opacity hover:opacity-100">
+<div class="h-16 w-16 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="font-bold text-gray-500 group-hover:text-white text-xs">IFS</span>
+</div>
+<span class="text-xs font-bold text-gray-400 group-hover:text-primary">Food Standard</span>
+</div>
+<div class="group flex flex-col items-center gap-2 cursor-pointer transition-opacity hover:opacity-100">
+<div class="h-16 w-16 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="font-bold text-gray-500 group-hover:text-white text-xs">BRC</span>
+</div>
+<span class="text-xs font-bold text-gray-400 group-hover:text-primary">Global Standard</span>
+</div>
+<div class="group flex flex-col items-center gap-2 cursor-pointer transition-opacity hover:opacity-100">
+<div class="h-16 w-16 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="font-bold text-gray-500 group-hover:text-white text-xs">ISO</span>
+</div>
+<span class="text-xs font-bold text-gray-400 group-hover:text-primary">9001:2015</span>
+</div>
+<div class="group flex flex-col items-center gap-2 cursor-pointer transition-opacity hover:opacity-100">
+<div class="h-16 w-16 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="font-bold text-gray-500 group-hover:text-white text-xs">ECO</span>
+</div>
+<span class="text-xs font-bold text-gray-400 group-hover:text-primary">Organic Cert</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Footer -->
+<footer class="bg-background-dark text-white pt-20 pb-10">
+<div class="layout-container px-4 md:px-10 max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 border-b border-gray-800 pb-12">
+<div class="max-w-md">
+<div class="flex items-center gap-3 mb-6">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-10 w-auto logofooter" style="height: 5rem;">
+</div>
+<p class="text-gray-400 mb-6">
+                            Líderes en el procesamiento y distribución de almendra española premium para la industria alimentaria global.
+                        </p>
+<button class="bg-primary hover:bg-primary-dark text-background-dark font-bold py-3 px-6 rounded-lg transition-colors">
+                            Contactar con Ventas
+                        </button>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<h4 class="font-bold text-lg mb-4 text-primary">Empresa</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-white transition-colors" href="empresa.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-white transition-colors" href="proceso.html">El Proceso</a></li>
+<li><a class="hover:text-white transition-colors" href="sostenibilidad.html">Sostenibilidad</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Blog Corporativo</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-4 text-primary">Legal</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">Aviso Legal</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Política de Cookies</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Certificados</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+<p>© 2025 YourAlmond S.L. Todos los derechos reservados. Design by <a href="https://ruzafa.marketing/" target="_blank" class="hover:text-primary transition-colors">ruzafa.marketing</a></p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+</div>
+</div>
+</div>
+</footer>
+</main>
+
+<!-- Video Modal -->
+<div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+        <span class="video-modal-close" id="videoModalClose">&times;</span>
+        <video controls autoplay>
+            <source src="video/El_Proceso_YourAlmond.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+</div>
+
+<script>
+// Video Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('videoModal');
+    const btn = document.getElementById('videoModalBtn');
+    const span = document.getElementById('videoModalClose');
+    const video = modal.querySelector('video');
+    
+    // Open modal when button is clicked
+    btn.onclick = function() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    // Close modal when X is clicked
+    span.onclick = function() {
+        closeModal();
+    }
+    
+    // Close modal when clicking outside of the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+        video.pause(); // Pause video when modal closes
+        video.currentTime = 0; // Reset video to beginning
+    }
+});
+</script>
+
+</body></html>

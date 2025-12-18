@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sostenibilidad - YourAlmond</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                primary: "#c8d301",
+                "background-light": "#f8f7f6",
+                "background-dark": "#221b10",
+                "text-main": "#333333"
+            },
+            fontFamily: {
+                display: "Work Sans",
+                body: ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {
+                DEFAULT: "0.25rem",
+                lg: "0.5rem",
+                xl: "0.75rem",
+                full: "9999px"
+            }
+        }
+    }
+};</script>
+<style>
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    .header-bg {
+        background-image: url('images/fh.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .logofooter {
+        background-color: white;
+    }
+    </style>
+</head>
+<body class="font-display text-text-main bg-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300 header-bg">
+<div class="px-6 md:px-10 lg:px-40 flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-4">
+<div class="flex w-full max-w-[1440px] items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3 cursor-pointer">
+<a href="index.html">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-12 w-auto" style="height: 7rem;">
+</a>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden lg:flex items-center justify-center gap-10">
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="empresa.html">Empresa</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="producto.html">Productos</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="proceso.html">Proceso</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="trazabilidad.html">Trazabilidad</a>
+<a class="text-primary font-semibold text-sm transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="certificaciones.html">Certificaciones</a>
+<a class="text-text-main dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-11 px-6 cursor-pointer items-center justify-center rounded-lg bg-primary hover:bg-primary/90 text-white dark:text-background-dark text-sm font-bold shadow-sm transition-transform hover:scale-105">
+<span>Solicitar Presupuesto</span>
+</button>
+<button class="lg:hidden p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- HeroSection -->
+<section class="relative flex min-h-[600px] flex-col justify-center overflow-hidden bg-cover bg-center" data-alt="Vast Spanish almond orchard under a golden sunset sky" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQjusnxGMaKlQiUkx8Mj9RTqGGzPH7BG7BLpO4eziRBXkoqw-xvQ8Dz8ZDhomV2fjVt7zBhkaMZfLeTvG2TjI2Ha_BB1R2KyZ_stEhYZhNLzjRggtErSwrNu8E_GnWK7o9c1c9REcYz6UDVW7YJijHxTfxD_k2cysRWWigUEV3QJc9DqlG8IbR9Ztk8MXA3bGYRUjKrC4H8uS4m28tWRuPkwrHe6upcAE7CdpL1TfUZztW_e23cJUooTxcZ1kkc7PXNl3cq_ZKHuI");'>
+<div class="px-6 py-20 lg:px-40 text-center">
+<div class="mx-auto max-w-[960px] flex flex-col gap-6 items-center">
+<h1 class="text-white text-5xl lg:text-7xl font-black leading-tight tracking-[-0.033em] drop-shadow-md">
+                    Raíces de Responsabilidad
+                </h1>
+<h2 class="text-white/90 text-lg lg:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-sm">
+                    Cultivando un futuro sostenible para la almendra española a través de la innovación, la trazabilidad y el respeto absoluto por la tierra.
+                </h2>
+<div class="mt-4 flex flex-col sm:flex-row gap-4">
+<button class="flex h-12 items-center justify-center rounded-full bg-primary px-8 text-white text-base font-bold transition-transform hover:scale-105">
+                        Descargar Informe 2024
+                    </button>
+<button class="flex h-12 items-center justify-center rounded-full bg-white px-8 text-text-main text-base font-bold transition-colors hover:bg-gray-100">
+                        Ver Certificaciones
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-background-light py-12 lg:py-20">
+<div class="px-6 lg:px-40 mx-auto max-w-[1400px]">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex flex-col gap-2 rounded-xl bg-white p-8 shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-4xl">water_drop</span>
+</div>
+<p class="text-text-main/70 text-sm font-medium uppercase tracking-wider">Ahorro de Agua</p>
+<p class="text-text-main text-4xl font-black tracking-tight">30%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl bg-white p-8 shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-4xl">solar_power</span>
+</div>
+<p class="text-text-main/70 text-sm font-medium uppercase tracking-wider">Energía Renovable</p>
+<p class="text-text-main text-4xl font-black tracking-tight">100%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl bg-white p-8 shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-4xl">groups</span>
+</div>
+<p class="text-text-main/70 text-sm font-medium uppercase tracking-wider">Agricultores Locales</p>
+<p class="text-text-main text-4xl font-black tracking-tight">150+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl bg-white p-8 shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-4xl">recycling</span>
+</div>
+<p class="text-text-main/70 text-sm font-medium uppercase tracking-wider">Residuos Reciclados</p>
+<p class="text-text-main text-4xl font-black tracking-tight">98%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FeatureSection / Pillars -->
+<section class="bg-white py-16 lg:py-24">
+<div class="px-6 lg:px-40 mx-auto max-w-[1400px]">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 text-center items-center">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Nuestro Compromiso</span>
+<h2 class="text-text-main text-3xl lg:text-4xl font-black leading-tight max-w-[800px]">
+                        Tres Pilares de Sostenibilidad Integral
+                    </h2>
+<p class="text-text-main/70 text-lg font-normal max-w-[720px]">
+                        Integramos la gestión ambiental en cada paso de nuestra cadena de valor, desde el suelo hasta el producto final entregado a nuestros clientes.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+<!-- Pillar 1 -->
+<div class="group flex flex-col gap-4 p-6 rounded-2xl bg-white border border-[#e5e5e5] hover:shadow-xl transition-all duration-300">
+<div class="h-48 w-full rounded-xl bg-gray-200 overflow-hidden mb-2">
+<img class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of healthy soil and almond tree sprout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADnvsMcb6nsvmAqr8CRfjiJIhvFETIHNcf7seaMxRTt0JDhgORGR6GoDO6Z8x3JgUtWi7kNLTeS9kdqpRMGy6GWmnxX4V_OTIm85v82XPddXb-iEZxc_NK8iaSygONQZO4qU4n7w0d2yXtxo7W-M5nwB8ZaNhm2mY-hx6mpYl0KQzs-8TqVMKdOqn8Zgawblg2qm9_RRk-ue-uo0U8XEIt6l3-1CENXiaB1MMQsqPurjdwAKRHhzL14uo5lOIz7sU3go2ro9cMTlw"/>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h3 class="text-text-main text-xl font-bold">Gestión Agrícola</h3>
+</div>
+<p class="text-text-main/70 text-base leading-relaxed">
+                            Implementamos riego inteligente y agricultura regenerativa para proteger la salud del suelo y fomentar la biodiversidad en nuestros campos españoles.
+                        </p>
+</div>
+<!-- Pillar 2 -->
+<div class="group flex flex-col gap-4 p-6 rounded-2xl bg-white border border-[#e5e5e5] hover:shadow-xl transition-all duration-300">
+<div class="h-48 w-full rounded-xl bg-gray-200 overflow-hidden mb-2">
+<img class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Farmer inspecting almond crops in sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4ug-foN4_OdSKkXVAHSXmLPJHgifZma1y5XhDs_c76u9_6PenAi5qPV9mYrX-26ekKjHiNWnUl_WdWfMOPL0-sJUaxr0HqjK85-g972A_iP97vZtAhBxx58XRNEaOP4mq05lRk8nj-Fodz-owAnEm3EjlTk4h3xZHiZcrA388VHFOnRFWY9_nC8nF9IG9A7VZWkdjWRIdqhnZlIV_JzTIAyktsXVREPRVNZdsrzmBCEcw4kApsMJ2BKq0m0tD4Po-vvp_qaT87GM"/>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">handshake</span>
+<h3 class="text-text-main text-xl font-bold">Alianzas Locales</h3>
+</div>
+<p class="text-text-main/70 text-base leading-relaxed">
+                            Garantizamos precios justos y contratos a largo plazo, apoyando a las comunidades rurales y asegurando la continuidad generacional del cultivo.
+                        </p>
+</div>
+<!-- Pillar 3 -->
+<div class="group flex flex-col gap-4 p-6 rounded-2xl bg-white border border-[#e5e5e5] hover:shadow-xl transition-all duration-300">
+<div class="h-48 w-full rounded-xl bg-gray-200 overflow-hidden mb-2">
+<img class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern clean processing factory interior with machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbDJPwUSFG9Lm6e8cX85Ut_k7QJ0f3Un9cbY1KURegyHRXtt-nWpxmDfdLSD9a5ecNqMzsKPqkxzuyto3V4Tb5jcZODWve9yG1u3G8Lb0R5heaNYBgUytp8WnlZT8RYCR-QEbgAfbziB10tM5P4XwX8rSxGI5Iy6_c89gnipmw0Zlt1ApboGPevR-N8hXN-HNK1EOVxSLi9JZWKg_a2hcXM4kQepIGRTm1kYUuV1QW5ZBzeHYP0_hypCPdcqfzhX6TeDZbcm9z1YU"/>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">factory</span>
+<h3 class="text-text-main text-xl font-bold">Eficiencia en Proceso</h3>
+</div>
+<p class="text-text-main/70 text-base leading-relaxed">
+                            Instalaciones de producción 'Zero-Waste' impulsadas por energía renovable, donde la cáscara de almendra se reutiliza como biomasa.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CSR / Detailed Impact Section -->
+<section class="bg-background-light py-16 lg:py-24">
+<div class="px-6 lg:px-40 mx-auto max-w-[1400px]">
+<div class="flex flex-col lg:flex-row gap-12 items-center rounded-3xl bg-white p-8 lg:p-12 shadow-sm">
+<div class="flex-1 flex flex-col gap-6">
+<div class="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm">
+<span class="material-symbols-outlined text-base">diversity_3</span>
+<span>Responsabilidad Social</span>
+</div>
+<h2 class="text-text-main text-3xl lg:text-4xl font-black leading-tight">
+                        Más allá del cultivo: Impacto Comunitario
+                    </h2>
+<p class="text-text-main/70 text-lg leading-relaxed">
+                        En YourAlmond, creemos que la sostenibilidad es también humana. Nuestro programa de Responsabilidad Social Corporativa se centra en la educación y el desarrollo de las zonas rurales de España.
+                    </p>
+<ul class="flex flex-col gap-4 mt-2">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-text-main font-medium">Formación técnica gratuita para agricultores asociados.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-text-main font-medium">Inversión en infraestructura de riego comunitaria.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-text-main font-medium">Certificación ética SMETA 4-Pillars.</span>
+</li>
+</ul>
+</div>
+<div class="flex-1 w-full">
+<div class="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
+<img class="absolute inset-0 h-full w-full object-cover" data-alt="Group of diverse farmers talking in an almond field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0GemBD7vfyfg2OUH5KQUFg4-yryEpmEo2YfyIKOreGnTuaFHt2lMyecXFfBHLQkdv793PBYL9ET-92M0RXs8Rzavn5Rpv--9KcVWhycxXhKDTJPIKVr35sKUVqGk3FSj-v6Qi1mks9b6urRlvJQeeeEkFKcIbq1wRM6hVz8kRvvAPBBkwG2B6zfZgoNIhgxdfnxhV5B5nbNiyYvWtWYRoE5uiPGPQOm8QAc1GAK9aV2sBn9_MY6oXId6hryvp7pB1Wbm8Bn7QSsY"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+<p class="text-white font-medium text-sm">Visita a campo en Albacete, Campaña 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="relative bg-background-dark py-20 overflow-hidden">
+<!-- Background Pattern (Abstract) -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative px-6 lg:px-40 mx-auto max-w-[960px] text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-6">format_quote</span>
+<h3 class="text-white text-2xl lg:text-4xl font-medium leading-relaxed italic mb-8">
+                "Trabajar con YourAlmond nos ha dado la estabilidad financiera necesaria para invertir en tecnologías de riego más eficientes. Es una relación basada en la confianza y el crecimiento mutuo."
+            </h3>
+<div class="flex flex-col items-center gap-2">
+<div class="h-16 w-16 rounded-full bg-gray-500 overflow-hidden border-2 border-primary">
+<img class="h-full w-full object-cover" data-alt="Portrait of Juan Garcia, an almond farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVVqUQlqEc5AKklgK-h_Xr5p8YsM1iyeSOrcYPBsnzqzMI2eDYKqC4MmgIrTgcXrMRWfv2K6ZuE-mFf6QDKzuVhNoIYQMBqHYZ2FdxGclK31SfhO78dDesY9jqbt-fb-DOxtG8A709n-tip7vqIopLitacsOBnozVSGxAKab6KUzp_CY5MhGqyLnfNUReS28o7HQu_z0NRSic-xZg7gcKc4maw5kJfYZy6ir4TzEhMDOPmYpX6D8QI2xYymyS7aXX8IA3KDZc60Yc"/>
+</div>
+<div class="text-center">
+<p class="text-white font-bold text-lg">Juan García</p>
+<p class="text-white/60 text-sm">Agricultor Asociado, Albacete</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pre-Footer CTA -->
+<section class="bg-primary py-16">
+<div class="px-6 lg:px-40 mx-auto max-w-[1400px] flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="text-white">
+<h2 class="text-3xl font-black mb-2">¿Listo para un suministro responsable?</h2>
+<p class="text-white/90 text-lg">Únase a la revolución de la almendra sostenible española.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition-colors">
+                    Contactar Ventas
+                </button>
+<button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors">
+                    Ver Catálogo
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#121212] pt-16 pb-8 border-t border-white/10">
+<div class="px-6 lg:px-40 mx-auto max-w-[1400px]">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2 text-white">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-10 w-auto logofooter" style="height: 5rem;">
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Líderes en la exportación de almendra española premium. Calidad, trazabilidad y sostenibilidad en cada envío.
+                    </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+<!-- Links 1 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-lg">Compañía</h4>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="empresa.html">Sobre Nosotros</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="trazabilidad.html">Trazabilidad</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Blog</a>
+</div>
+<!-- Links 2 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-lg">Productos</h4>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="producto.html">Almendra Natural</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="producto.html">Almendra repelada</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="producto.html">Industrial</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="producto.html">Harinas</a>
+</div>
+<!-- Contact -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-lg">Contacto</h4>
+<p class="text-gray-400 text-sm">Polígono Industrial La Paz, Parcela 4<br/>Albacete, España</p>
+<p class="text-gray-400 text-sm">+34 967 00 00 00</p>
+<p class="text-gray-400 text-sm">info@youralmond.com</p>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-xs">© 2025 YourAlmond S.L. Todos los derechos reservados. Design by <a href="https://ruzafa.marketing/" target="_blank" class="hover:text-primary transition-colors">ruzafa.marketing</a></p>
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-white text-xs transition-colors" href="#">Política de Privacidad</a>
+<a class="text-gray-500 hover:text-white text-xs transition-colors" href="#">Términos de Uso</a>
+<a class="text-gray-500 hover:text-white text-xs transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

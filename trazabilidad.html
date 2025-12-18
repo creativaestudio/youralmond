@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trazabilidad YourAlmond - Del Origen al Cliente</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {theme: {extend: {colors: {primary: "#c8d301", "background-main": "#FFFFFF", "background-secondary": "#F5F5F5", "background-dark": "#221b10", "text-main": "#333333", "text-secondary": "#666666", "text-light": "#FFFFFF", "background-light": "#f8f7f6"}, fontFamily: {display: "Work Sans", sans: ["Inter", "sans-serif"]}, backgroundImage: {"grid-pattern": "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FF6B00' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E\")"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    .header-bg {
+        background-image: url('images/fh.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    </style>
+</head>
+<body class="bg-background-main text-text-main font-sans antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+<header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-white/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300 header-bg">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-6 md:px-10 lg:px-40 flex flex-1 justify-center py-4">
+<div class="layout-content-container flex w-full max-w-[1440px] items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3 cursor-pointer">
+<a href="index.html">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-12 w-auto" style="height: 7rem;">
+</a>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden lg:flex items-center justify-center gap-10">
+<a class="text-text-main dark:text-black hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="empresa.html">Sobre Nosotros</a>
+<a class="text-text-main dark:text-black hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="producto.html">Productos</a>
+<a class="text-text-main dark:text-black hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="proceso.html">Proceso</a>
+<a class="text-primary font-semibold text-sm transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="trazabilidad.html">Trazabilidad</a>
+<a class="text-text-main dark:text-black hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="text-text-main dark:text-black hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="certificaciones.html">Certificaciones</a>
+<a class="text-text-main dark:text-black hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-11 px-6 cursor-pointer items-center justify-center rounded-lg bg-primary hover:bg-primary/90 text-white dark:text-background-dark text-sm font-bold shadow-sm transition-transform hover:scale-105">
+<span>Solicitar Presupuesto</span>
+</button>
+<button class="lg:hidden p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="relative w-full h-[600px] lg:h-[700px] overflow-hidden bg-background-dark flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBia4_v_S8Ea8oQtmZ9F7xGsFFHicIicL93y-PbKqZGzRoJDsoEH4HlbZNfZ70WpICoXON6NohhoDJA7C6LHaBIMsPP0CDhSMAXjPxvNAlKu1OEtbAa7w3AINblVKKzF9FriLD-oFIAopLlElPwLWmG0dvcZAgBetLEgWz8U7ZVlrb1R8XQrJjcNU-rXkGKtRsaymN8mMCNvAEkkCGFVHbyJKDQnTcfHefVQPgeBxPdRB0_KtFfpQ8cHf8PkzMUfmUigL3RSMgBmbc"); filter: brightness(0.6) saturate(1.1);'></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1920px] px-6 md:px-10 lg:px-40 mt-10">
+<div class="max-w-4xl flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 backdrop-blur-md w-fit">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-white">Tecnología Blockchain</span>
+</div>
+<h1 class="text-white text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight">
+                        Confianza Radical <br/>
+<span class="text-primary bg-clip-text">Del Campo a la Mesa</span>
+</h1>
+<p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+                        Monitorizamos cada paso del viaje de su almendra. Desde la composición del suelo en nuestras fincas españolas hasta la entrega en su planta de producción, garantizando calidad, seguridad y origen 100% verificado.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<div class="h-14 bg-white rounded flex items-center p-1 pr-2 w-full max-w-md shadow-xl">
+<span class="material-symbols-outlined text-gray-400 px-3">qr_code_scanner</span>
+<input class="h-full w-full border-none focus:ring-0 text-text-main placeholder-gray-400 text-sm" placeholder="Introduzca número de lote..." type="text"/>
+<button class="h-10 px-6 rounded bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+                                Rastrear
+                            </button>
+</div>
+</div>
+<p class="text-xs text-gray-400 mt-2">*Pruebe con el lote de muestra: YA-2024-MCN-001</p>
+</div>
+</div>
+</div>
+<div class="w-full bg-primary text-white">
+<div class="flex justify-center">
+<div class="w-full max-w-[1920px] px-6 md:px-10 lg:px-40 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">sensors</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-black">24/7</span>
+<span class="text-sm font-medium opacity-90">Monitorización IoT</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">history_edu</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-black">100%</span>
+<span class="text-sm font-medium opacity-90">Registros Digitales</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-black">0%</span>
+<span class="text-sm font-medium opacity-90">Incidencias Calidad</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-black">ES</span>
+<span class="text-sm font-medium opacity-90">Origen Certificado</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="w-full py-24 bg-background-secondary relative overflow-hidden">
+<div class="absolute inset-0 bg-grid-pattern opacity-[0.4]"></div>
+<div class="flex justify-center relative z-10">
+<div class="w-full max-w-[1920px] px-6 md:px-10 lg:px-40 flex flex-col gap-16">
+<div class="text-center max-w-3xl mx-auto">
+<span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Ciclo de Vida</span>
+<h2 class="text-text-main text-4xl md:text-5xl font-black tracking-tight mb-6">Transparencia en 5 Etapas</h2>
+<p class="text-text-secondary text-lg">Nuestro sistema integrado verticalmente nos permite controlar cada variable crítica. No somos intermediarios, somos productores.</p>
+</div>
+<div class="relative mt-10">
+<div class="hidden lg:block absolute top-12 left-[10%] right-[10%] h-1 bg-gray-200">
+<div class="h-full bg-primary/30 w-1/2"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative">
+<div class="group flex flex-col items-center text-center gap-6 relative">
+<div class="relative z-10 size-24 rounded-2xl bg-white border border-gray-100 shadow-lg flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-5xl">potted_plant</span>
+<div class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold size-6 rounded-full flex items-center justify-center">1</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main mb-2">Cultivo</h3>
+<p class="text-sm text-text-secondary px-2">Geolocalización de parcelas, análisis de suelo y sensores de riego inteligente para optimizar recursos.</p>
+</div>
+<div class="mt-4 px-3 py-1 bg-white border border-gray-200 rounded text-xs font-mono text-gray-500 shadow-sm">
+                                    DATA: Humedad Suelo 18%
+                                </div>
+</div>
+<div class="group flex flex-col items-center text-center gap-6 relative">
+<div class="relative z-10 size-24 rounded-2xl bg-white border border-gray-100 shadow-lg flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-5xl">agriculture</span>
+<div class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold size-6 rounded-full flex items-center justify-center">2</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main mb-2">Cosecha</h3>
+<p class="text-sm text-text-secondary px-2">Recolección mecanizada en el punto óptimo de maduración. Registro de fecha, hora y lote en campo.</p>
+</div>
+<div class="mt-4 px-3 py-1 bg-white border border-gray-200 rounded text-xs font-mono text-gray-500 shadow-sm">
+                                    DATA: Lote #C-8921
+                                </div>
+</div>
+<div class="group flex flex-col items-center text-center gap-6 relative">
+<div class="relative z-10 size-24 rounded-2xl bg-white border border-gray-100 shadow-lg flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-5xl">factory</span>
+<div class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold size-6 rounded-full flex items-center justify-center">3</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main mb-2">Procesado</h3>
+<p class="text-sm text-text-secondary px-2">Descascarado y calibrado con tecnología óptica. Separación de cuerpos extraños y clasificación por tamaño.</p>
+</div>
+<div class="mt-4 px-3 py-1 bg-white border border-gray-200 rounded text-xs font-mono text-gray-500 shadow-sm">
+                                    DATA: Calibre 12/14mm
+                                </div>
+</div>
+<div class="group flex flex-col items-center text-center gap-6 relative">
+<div class="relative z-10 size-24 rounded-2xl bg-white border border-gray-100 shadow-lg flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-5xl">science</span>
+<div class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold size-6 rounded-full flex items-center justify-center">4</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main mb-2">Calidad</h3>
+<p class="text-sm text-text-secondary px-2">Análisis de laboratorio para aflatoxinas y microbiología. Certificación de calidad antes del envasado final.</p>
+</div>
+<div class="mt-4 px-3 py-1 bg-white border border-gray-200 rounded text-xs font-mono text-gray-500 shadow-sm">
+                                    DATA: Aflatoxinas &lt;1ppb
+                                </div>
+</div>
+<div class="group flex flex-col items-center text-center gap-6 relative">
+<div class="relative z-10 size-24 rounded-2xl bg-white border border-gray-100 shadow-lg flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-5xl">local_shipping</span>
+<div class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold size-6 rounded-full flex items-center justify-center">5</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main mb-2">Entrega</h3>
+<p class="text-sm text-text-secondary px-2">Trazabilidad logística en tiempo real hasta sus instalaciones. Informe de temperatura durante el transporte.</p>
+</div>
+<div class="mt-4 px-3 py-1 bg-white border border-gray-200 rounded text-xs font-mono text-gray-500 shadow-sm">
+                                    DATA: Entregado 14:00h
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-24 bg-background-main">
+<div class="flex justify-center">
+<div class="w-full max-w-[1920px] px-6 md:px-10 lg:px-40 grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative bg-background-secondary rounded-2xl p-8 h-[600px] border border-gray-100 overflow-hidden shadow-inner flex items-center justify-center group">
+<div class="absolute inset-0 opacity-10 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Spain_location_map.svg')] bg-cover bg-center"></div>
+<div class="relative w-full h-full">
+<div class="absolute top-[40%] right-[30%] animate-pulse">
+<div class="size-32 rounded-full bg-primary/20 blur-xl"></div>
+</div>
+<div class="absolute top-[40%] right-[30%] flex flex-col items-center group/pin hover:z-50 cursor-pointer">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-xl">location_on</span>
+<span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xs pt-1">1</span>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-xl mt-2 w-64 border-l-4 border-primary transform scale-0 group-hover/pin:scale-100 transition-transform origin-top z-10 absolute top-10">
+<h4 class="font-bold text-text-main">Finca El Almendro</h4>
+<p class="text-xs text-text-secondary mt-1">Albacete, España</p>
+<div class="flex gap-2 mt-2">
+<span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded text-gray-600">Marcona</span>
+<span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded text-gray-600">Eco</span>
+</div>
+</div>
+</div>
+<div class="absolute top-[55%] right-[25%] flex flex-col items-center group/pin hover:z-50 cursor-pointer">
+<div class="relative">
+<span class="material-symbols-outlined text-gray-400 text-4xl drop-shadow-xl hover:text-primary transition-colors">location_on</span>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-xl mt-2 w-64 border-l-4 border-primary transform scale-0 group-hover/pin:scale-100 transition-transform origin-top z-10 absolute top-8">
+<h4 class="font-bold text-text-main">Finca La Solana</h4>
+<p class="text-xs text-text-secondary mt-1">Murcia, España</p>
+</div>
+</div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none">
+<path d="M 400 300 Q 500 200 600 250" fill="none" stroke="#FF6B00" stroke-dasharray="5,5" stroke-opacity="0.3" stroke-width="2"></path>
+</svg>
+<div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur p-4 rounded-lg shadow-sm border border-gray-100">
+<h5 class="font-bold text-sm mb-2">Nuestras Regiones</h5>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-xs text-text-secondary"><div class="size-3 rounded-full bg-primary"></div> Cultivo Intensivo</div>
+<div class="flex items-center gap-2 text-xs text-text-secondary"><div class="size-3 rounded-full bg-gray-400"></div> Cultivo Tradicional</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-background-secondary w-fit text-primary font-bold text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">public</span> Origen España
+                    </div>
+<h2 class="text-4xl font-bold text-text-main leading-tight">Geolocalización y <br/>Control de Origen</h2>
+<p class="text-text-secondary text-lg leading-relaxed">
+                        La calidad de la almendra empieza en el suelo. Mediante sistemas GIS (Sistemas de Información Geográfica), mapeamos cada hectárea de nuestras fincas. Esto nos permite un control agronómico preciso, adaptando el riego y los nutrientes a las necesidades específicas de cada árbol.
+                    </p>
+<ul class="flex flex-col gap-4 mt-4">
+<li class="flex items-start gap-4">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary mt-1 shrink-0">
+<span class="material-symbols-outlined text-xl">water_drop</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main">Eficiencia Hídrica</h4>
+<p class="text-sm text-text-secondary">Sensores de humedad que reducen el consumo de agua un 30%.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary mt-1 shrink-0">
+<span class="material-symbols-outlined text-xl">solar_power</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main">Sostenibilidad Energética</h4>
+<p class="text-sm text-text-secondary">Procesado impulsado al 100% por energía solar de nuestras plantas.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary mt-1 shrink-0">
+<span class="material-symbols-outlined text-xl">biotech</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main">Biodiversidad</h4>
+<p class="text-sm text-text-secondary">Mantenimiento de cubiertas vegetales y lindes para fomentar polinizadores.</p>
+</div>
+</li>
+</ul>
+<button class="mt-4 px-8 py-4 bg-text-main text-white font-bold rounded hover:bg-black transition-all w-fit flex items-center gap-2">
+                        Ver Política de Sostenibilidad <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-24 bg-background-dark text-white">
+<div class="flex justify-center">
+<div class="w-full max-w-[1920px] px-6 md:px-10 lg:px-40">
+<div class="grid lg:grid-cols-2 gap-16 mb-16">
+<div>
+<h2 class="text-4xl md:text-5xl font-black mb-6">Obsesión por la Calidad</h2>
+<p class="text-gray-400 text-lg">
+                            Nuestra planta de procesado 4.0 está equipada con la tecnología de selección más avanzada del mercado. Nada escapa a nuestros sensores.
+                        </p>
+</div>
+<div class="flex items-end justify-start lg:justify-end">
+<div class="flex gap-8 border-l border-gray-700 pl-8">
+<div>
+<span class="block text-4xl font-bold text-primary">99.9%</span>
+<span class="text-sm text-gray-400">Pureza Garantizada</span>
+</div>
+<div>
+<span class="block text-4xl font-bold text-primary">&lt;1%</span>
+<span class="text-sm text-gray-400">Almendra Amarga</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-[#1E1E1E] p-8 rounded-xl border border-gray-800 hover:border-primary/50 transition-colors group">
+<div class="mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">center_focus_strong</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Selección Óptica Bichromática</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                            Cámaras de alta velocidad escanean cada almendra individualmente, detectando defectos de color, forma y tamaño imperceptibles al ojo humano.
+                        </p>
+</div>
+<div class="bg-[#1E1E1E] p-8 rounded-xl border border-gray-800 hover:border-primary/50 transition-colors group">
+<div class="mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">infrared</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Tecnología NIR &amp; Rayos X</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                            Detección avanzada de cuerpos extraños (piedras, vidrio, metal) y análisis interno de la almendra para descartar daños ocultos por insectos.
+                        </p>
+</div>
+<div class="bg-[#1E1E1E] p-8 rounded-xl border border-gray-800 hover:border-primary/50 transition-colors group">
+<div class="mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">science</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Laboratorio In-House</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                            Análisis continuo de cada lote para parámetros físico-químicos: humedad, peróxidos y ácidos grasos libres. Seguridad alimentaria total.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-24 bg-background-main">
+<div class="flex justify-center">
+<div class="w-full max-w-[1920px] px-6 md:px-10 lg:px-40 flex flex-col items-center">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-text-main mb-4">Certificaciones Internacionales</h2>
+<p class="text-text-secondary max-w-2xl mx-auto">Cumplimos con los estándares más exigentes de la industria alimentaria global, auditados anualmente por entidades independientes.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 w-full">
+<div class="flex flex-col items-center gap-4 text-center group">
+<div class="h-24 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+<div class="border-2 border-text-main p-2 px-4 font-black text-2xl tracking-tighter">IFS<span class="text-primary">Food</span></div>
+</div>
+<h4 class="font-bold text-text-main">IFS Food v7</h4>
+<p class="text-xs text-text-secondary px-4">Higher Level Score. Garantía de seguridad y calidad en procesos de producción.</p>
+<a class="text-primary text-xs font-bold hover:underline mt-2" href="#">Descargar Certificado</a>
+</div>
+<div class="flex flex-col items-center gap-4 text-center group">
+<div class="h-24 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+<div class="border-2 border-text-main p-2 px-4 font-black text-2xl tracking-tighter">BRC<span class="text-primary">GS</span></div>
+</div>
+<h4 class="font-bold text-text-main">BRC Global Standard</h4>
+<p class="text-xs text-text-secondary px-4">Grade AA+. Estándar mundial para la seguridad de los alimentos.</p>
+<a class="text-primary text-xs font-bold hover:underline mt-2" href="#">Descargar Certificado</a>
+</div>
+<div class="flex flex-col items-center gap-4 text-center group">
+<div class="h-24 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+<div class="border-2 border-green-700 text-green-700 rounded-full size-16 flex items-center justify-center font-serif text-3xl font-bold">bio</div>
+</div>
+<h4 class="font-bold text-text-main">Certificación Ecológica EU</h4>
+<p class="text-xs text-text-secondary px-4">Cumplimiento del reglamento europeo para producción orgánica.</p>
+<a class="text-primary text-xs font-bold hover:underline mt-2" href="#">Descargar Certificado</a>
+</div>
+<div class="flex flex-col items-center gap-4 text-center group">
+<div class="h-24 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+<div class="border-2 border-text-main rounded-full size-16 flex items-center justify-center font-bold text-lg">K</div>
+</div>
+<h4 class="font-bold text-text-main">Kosher Certified</h4>
+<p class="text-xs text-text-secondary px-4">Apto para el consumo bajo las leyes dietéticas judías.</p>
+<a class="text-primary text-xs font-bold hover:underline mt-2" href="#">Descargar Certificado</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-20 px-6 bg-primary">
+<div class="flex justify-center">
+<div class="w-full max-w-4xl text-center text-white flex flex-col items-center gap-8">
+<h2 class="text-3xl md:text-5xl font-black">¿Necesita Fichas Técnicas Completas?</h2>
+<p class="text-lg opacity-90 font-medium">Acceda a nuestra área de clientes para descargar especificaciones detalladas por variedad, análisis de lotes y certificados vigentes.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-white text-primary px-8 py-4 rounded font-bold hover:bg-gray-100 transition-colors shadow-xl">
+                        Solicitar Acceso B2B
+                    </button>
+<button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition-colors">
+                        Contactar Equipo Calidad
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark text-white pt-20 pb-10 border-t border-gray-800">
+<div class="w-full flex justify-center">
+<div class="px-6 md:px-10 lg:px-40 w-full max-w-[1920px] flex flex-col gap-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<img src="images/logoyouralmond.png" alt="YourAlmond Logo" class="h-10 w-auto" style="height: 5rem;">
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                            Productor y distribuidor líder de almendra española premium para el mercado B2B global. Innovación, sostenibilidad y origen en cada grano.
+                        </p>
+<div class="flex gap-4 mt-2">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg text-white">Empresa</h4>
+<ul class="flex flex-col gap-2 text-gray-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="empresa.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="trazabilidad.html">Trazabilidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nuestras Fincas</a></li>
+<li><a class="hover:text-primary transition-colors" href="contacto.html">Trabaja con Nosotros</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg text-white">Productos</h4>
+<ul class="flex flex-col gap-2 text-gray-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="producto.html">Almendra Marcona</a></li>
+<li><a class="hover:text-primary transition-colors" href="producto.html">Almendra Largueta</a></li>
+<li><a class="hover:text-primary transition-colors" href="producto.html">Industrial (Harinas/Cubitos)</a></li>
+<li><a class="hover:text-primary transition-colors" href="producto.html">Ecológica / Bio</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg text-white">Boletín de Calidad</h4>
+<p class="text-gray-400 text-sm">Reciba actualizaciones sobre normativas y cosechas.</p>
+<form class="flex flex-col gap-2">
+<input class="h-10 px-3 rounded bg-gray-800 border-none text-white text-sm placeholder-gray-500 focus:ring-1 focus:ring-primary" placeholder="Email corporativo" type="email"/>
+<button class="h-10 rounded bg-primary text-background-dark font-bold text-sm hover:bg-primary/90 transition-colors">Suscribirse</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-sm">© 2025 YourAlmond S.L. Todos los derechos reservados. Design by <a href="https://ruzafa.marketing/" target="_blank" class="hover:text-primary transition-colors">ruzafa.marketing</a></p>
+<div class="flex gap-6 text-gray-500 text-sm">
+<a class="hover:text-white transition-colors" href="#">Aviso Legal</a>
+<a class="hover:text-white transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Política de Cookies</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
