@@ -190,11 +190,23 @@
 <button class="hidden sm:flex h-11 px-6 cursor-pointer items-center justify-center rounded-lg bg-primary hover:bg-primary/90 text-white dark:text-background-dark text-sm font-bold shadow-sm transition-transform hover:scale-105">
 <span>Solicitar Presupuesto</span>
 </button>
-<button class="lg:hidden p-2 text-text-main dark:text-white">
+<button class="lg:hidden p-2 text-text-main dark:text-white" id="mobile-menu-button">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
+<!-- Mobile Menu -->
+<nav class="hidden lg:hidden fixed top-16 left-0 right-0 bg-white dark:bg-background-dark shadow-lg z-40" id="mobile-menu">
+<div class="px-6 py-4 space-y-1 text-right">
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="index.html">Inicio</a>
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="empresa.html">Empresa</a>
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="producto.html">Productos</a>
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="proceso.html">Proceso</a>
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="sostenibilidad.html">Sostenibilidad</a>
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="trazabilidad.html">Trazabilidad</a>
+<a class="block px-4 py-3 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-right" href="contacto.html">Contacto</a>
+</div>
+</nav>
 </div>
 </div>
 </header>
@@ -645,6 +657,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+</script>
+
+<!-- Mobile Menu Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    // Toggle mobile menu
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+    });
+    
+    // Close menu when clicking on a link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnButton = mobileMenuButton.contains(event.target);
+        
+        if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        }
+    });
 });
 </script>
 
